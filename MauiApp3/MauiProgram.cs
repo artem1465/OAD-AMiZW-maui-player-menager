@@ -1,4 +1,4 @@
-﻿using MauiApp3.Commands;
+using MauiApp3.Commands;
 using MauiApp3.Data;
 using MauiApp3.Queries;
 using MauiApp3.ViewModel;
@@ -15,6 +15,8 @@ namespace MauiApp3
                 .UseMauiApp<App>();
             builder.Services.AddSingleton<PlayerRepository>();
             builder.Services.AddTransient<AddPlayerCommandHandler>();
+            builder.Services.AddTransient<DeletePlayerCommandHandler>();
+            builder.Services.AddTransient<EditPlayerCommandHandler>();
             builder.Services.AddTransient<GetPlayerByIdQueryHandler>();
             builder.Services.AddTransient<GetPlayersQueryHandler>();
             builder.Services.AddTransient<MainViewModel>();

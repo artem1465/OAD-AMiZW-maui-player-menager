@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp3.MainPage">
@@ -21,10 +21,8 @@
             <Button
                 Text="Dodaj gracza"
                 Command="{Binding AddPlayerCommandButton}" />
-            
-            
-            
-            
+
+
 
             <Label
                 Text="Lista graczy"
@@ -82,6 +80,49 @@
                 FontAttributes="Bold"/>
             <Label
                 Text="{Binding SearchResult}"
+                FontSize="18"/>
+
+
+            <Label
+                Text="Usuń gracza"
+                FontSize="24"
+                FontAttributes="Bold"
+                Margin="0,20,0,0"/>
+
+            <Entry
+                Placeholder="Podaj Id gracza"
+                Keyboard="Numeric"
+                Text="{Binding DeletePlayerId}"/>
+            <Button
+                Text="Usuń gracza"
+                Command="{Binding DeletePlayerCommandButton}"/>
+            <Label
+                Text="{Binding DeleteResult}"
+                FontSize="18"/>
+
+
+            <Label
+                Text="Edytuj gracza"
+                FontSize="24"
+                FontAttributes="Bold"
+                Margin="0,20,0,0"/>
+
+            <Entry
+                Placeholder="Id gracza"
+                Keyboard="Numeric"
+                Text="{Binding EditPlayerId}"/>
+            <Entry
+                Placeholder="Nowa nazwa"
+                Text="{Binding EditPlayerName}"/>
+            <Entry
+                Placeholder="Nowy poziom"
+                Keyboard="Numeric"
+                Text="{Binding EditPlayerLevel}"/>
+            <Button
+                Text="Edytuj gracza"
+                Command="{Binding EditPlayerCommandButton}"/>
+            <Label
+                Text="{Binding EditResult}"
                 FontSize="18"/>
         </VerticalStackLayout>
     </ScrollView>
